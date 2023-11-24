@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import CreatePost from './screens/create/CreatePost.js'
+import NavBar from './ReactFunctionComponents/NavBar';
+import PostDetail from './screens/postDetails/PostDetails.js'
+import EditPost from './screens/edit/EditPost.js'
+// import Notification from './calenderCreation/notification';
+// import DayWiseLogic from './dayWiseLogic/dateWiselogic'
+import Home from './screens/Home.js'
+import ThemeSwitch from './switch/ThemeSwitch';
+import { useThemeContext } from './hooks/useThemeContext';
 
 function App() {
+  const {theme} = useThemeContext()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`text-center ${theme==="dark"?"bg-blue-200":"bg-red-200"}`}>
+      {/* <DayWiseLogic/> */}
+      {/* <Notification/> */}
+      <BrowserRouter>
+        <NavBar />
+        <ThemeSwitch/>
+        <div className='pt-5'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<CreatePost />} />
+            <Route path="/post/:id" element={<PostDetail />} />
+            <Route path="/edit/:id" element={<EditPost/>} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
