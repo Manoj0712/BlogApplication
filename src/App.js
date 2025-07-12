@@ -5,7 +5,6 @@ import NavBar from './ReactFunctionComponents/NavBar';
 import PostDetail from './screens/postDetails/PostDetails.js'
 import EditPost from './screens/edit/EditPost.js'
 import Notification from './calenderCreation/notification';
-"just test"
 import DayWiseLogic from './dayWiseLogic/dateWiselogic'
 import Home from './screens/Home.js'
 import ThemeSwitch from './switch/ThemeSwitch';
