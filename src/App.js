@@ -4,7 +4,6 @@ import CreatePost from './screens/create/CreatePost.js'
 import NavBar from './ReactFunctionComponents/NavBar';
 import PostDetail from './screens/postDetails/PostDetails.js'
 import EditPost from './screens/edit/EditPost.js'
-// testing 
 import Notification from './calenderCreation/notification';
 // import DayWiseLogic from './dayWiseLogic/dateWiselogic'
 import Home from './screens/Home.js'
