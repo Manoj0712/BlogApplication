@@ -4,8 +4,8 @@ import CreatePost from './screens/create/CreatePost.js'
 import NavBar from './ReactFunctionComponents/NavBar';
 import PostDetail from './screens/postDetails/PostDetails.js'
 import EditPost from './screens/edit/EditPost.js'
-// import Notification from './calenderCreation/notification';
-// import DayWiseLogic from './dayWiseLogic/dateWiselogic'
+import Notification from './calenderCreation/notification';
+import DayWiseLogic from './dayWiseLogic/dateWiselogic'
 import Home from './screens/Home.js'
 import ThemeSwitch from './switch/ThemeSwitch';
 import { useThemeContext } from './hooks/useThemeContext';
