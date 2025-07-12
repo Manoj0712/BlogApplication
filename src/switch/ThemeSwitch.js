@@ -11,7 +11,6 @@ export default function ThemeSwitch() {
         } else {
             dispatch({ type: "LIGHT" })
         }
-console.log(theme)
     }
     return (
         <div className='flex items-start pl-24 pt-5'>

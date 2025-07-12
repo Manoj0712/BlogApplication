@@ -110,10 +110,7 @@ export default class notification extends Component {
       }
       stateObjectCopy.month.push(empty)
     }
-    console.log("this.state.currentDay",new Date().getDate())
-    console.log(this.state.calender.currentMonth)
     let dayData=stateObjectCopy.month[this.state.calender.currentMonth][new Date().getDate()].dayEvent
-    console.log("dayData",dayData)
     this.setState({ calender: stateObjectCopy,dayWiseEventsLoad:dayData})
   }
   eventsAdd = () => {
@@ -198,7 +195,6 @@ export default class notification extends Component {
         monthCount = 0
       }
       copyCalender.currentMonth = monthCount
-      console.log("monthCount", monthCount)
       copyCalender.currentMonthName = months[monthCount]
       this.setState({ calender: copyCalender })
     } else {
